@@ -202,7 +202,7 @@ Do you [[go to the game]] or [[head to the library to study]]?]
 
 (if: $joinedband is false and $compassion is true) [Fortunately you don&#39;t have very many weekend plans, so you have plenty of time to knock out these assignments. As you&#39;re heading to bed on Friday, Max texts and asks if you want to go to the first home game tomorrow. Football isn&#39;t really your thing, but it could be nice to spend time with your new friend. On the other hand, the homework...
 
-Do you [[go to the game]] or [[head to the library to study]]?]
+Do you [[go to the game]] or [[stay in and work]]?]
 </tw-passagedata><tw-passagedata pid="20" name="wake up early on Saturday and knock out a few assignments" tags="" position="750,1150" size="100,100">&#39;&#39;Proactivity Wins&#39;&#39;
 
 (set: $worklifebalance to true) Thanks to your planning ahead, you knocked out all of your assignments with time to spare, and even had time for a few hours of practice on Sunday. You&#39;re glad to learn that, with the right amount of proactivity, [[it&#39;s certainly possible to do marching band and succeed in music school!-&gt;Performance Opportunities]]</tw-passagedata><tw-passagedata pid="21" name="save it all for Sunday?" tags="" position="750,1025" size="100,100">&#39;&#39;Oops... &#39;&#39;
@@ -244,17 +244,19 @@ Do you [[go get ice cream and tell Sam, Riley, and Alex you can&#39;t come-&gt;B
 
 (if: $compassion is true) [You and Max join several other Blair students for ice cream to celebrate your successful performance. [[It&#39;s such a great feeling to be surrounded by an amazing community.-&gt;End of Semester]]]</tw-passagedata><tw-passagedata pid="26" name="head to the library to study" tags="" position="425,1150" size="100,100">&lt;img src=&quot;https://cdn.vanderbilt.edu/vu-news/files/20190418001823/Library_Parks_Armistead_main.jpg&quot; height=&quot;350&quot; width=&quot;500&quot;&gt;
 
-(set: $lonely to true) You get a lot done at the library, and even have time for a few hours of practice at Blair. You&#39;re quite prepared for all of your lesson material, but you still can&#39;t shake the [[loneliness you&#39;ve been feeling since you arrived at school.-&gt;First Concert]]</tw-passagedata><tw-passagedata pid="27" name="Blair Friends" tags="" position="925,1450" size="100,100">&#39;&#39;Ice Cream&#39;&#39;
+(if: $lonely to true) [You get a lot done at the library, and even have time for a few hours of practice at Blair. You&#39;re quite prepared for all of your lesson material, but you still can&#39;t shake the [[loneliness you&#39;ve been feeling since you arrived at school.-&gt;First Concert]]]</tw-passagedata><tw-passagedata pid="27" name="Blair Friends" tags="" position="925,1450" size="100,100">&#39;&#39;Ice Cream&#39;&#39;
 
 All of your fellow music students have always been nice to you, but at the ice cream shop, you realize that the &quot;tight knit community&quot; everyone talks about at Blair is absolutely real. The other students welcome you with open arms, and you have a blast celebrating your successful concert.
 
 It&#39;s great to have Sam, Alex, and Riley as your close friends, but you&#39;re also starting to recognize [[how important it is to be a part of the bigger community as well.-&gt;End of Semester]]
 
-(set: $wolfpack to false) (set: $community to true)</tw-passagedata><tw-passagedata pid="28" name="here" tags="" position="800,1825" size="100,100">&#39;&#39;About This Project&#39;&#39;
+(set: $wolfpack to false) (set: $community to true)</tw-passagedata><tw-passagedata pid="28" name="here" tags="" position="800,1850" size="100,100">&#39;&#39;About This Project&#39;&#39;
 
 Throughout the project, I embedded aspects of my own personal experiences as a music major with fictional narrative elements to explore the many facets of the musician&#39;s identity in college. We are often faced with tough choices regarding our academic, musical, and social priorities, and I wanted to give the player a chance to grapple with the consequences of these choices. For instance, overloading oneself with too many commitments often results in burnout. There are also many ethical decisions that arise as a college student in general, such as whether or not to include outsiders in social situations. Through the pathways of the game, I sought to present the idea that showing compassion to other students and contributing meaningfully to the community would result in better outcomes, while isolating oneself would lead to less-than-fun consequences. The narrative structure of the game is mostly chronological in a way that corresponds to the natural progression of a freshman semester of music school. However, certain events are only unlocked by certain choices, creating greater variability in the experiences. For the musicians interacting with the game, especially former students, I hope this project can serve as a tool to encourage wise decision making. For the non-musicians participating, I hope it can serve as a window into the identity and lives of music majors and provide a vessel for empathy and learning.
 
--Matthew Oh</tw-passagedata></tw-storydata>
+-Matthew Oh</tw-passagedata><tw-passagedata pid="29" name="stay in and work" tags="" position="425,1300" size="100,100">(set: $compassion to false) (set: $lonely to true) You tell Max that you&#39;re too busy to go to the game with him. 
+
+Hours later, as you sit in your room working, you wish you had (if: $Orchestra is true)[[[invested more in developing a new friendship.-&gt;Performance Opportunities]]] (if: $windsymphony is true)[[[invested more in developing a new friendship.-&gt;First Concert]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
